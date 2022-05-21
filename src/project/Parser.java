@@ -12,10 +12,10 @@ public class Parser {
 
         this.tokens = tokens;
     }
-    public Token receive(String[] need){ // парсинг формулы со скобками
+    public Token receive(String[] need){
         Token curToken;
         if (position < tokens.size()) {
-            curToken = tokens.get(position);// достаем токен
+            curToken = tokens.get(position);
             for (String tokenTypeName : need)
                 if (tokenTypeName.equals(curToken.type.nameType)) {
                     position++;
@@ -31,7 +31,7 @@ public class Parser {
         }
     }
     public ExNode parseVarNum(){
-        if (tokens.get(position).type.nameType.equals("NUMBER")){
+        if (tokens.get(position).type.nameType.equals("NUM")){
             position++;
             return new NumberNode(tokens.get(position - 1));
         }

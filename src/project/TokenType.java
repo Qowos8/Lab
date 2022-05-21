@@ -8,7 +8,7 @@ public class TokenType {
         this.regex = regex;
     }
     public static TokenType[] listOfToken = {
-            new TokenType("NUMBER", "^0|[1-9][0-9]*"),
+            new TokenType("NUM", "^0|[1-9][0-9]*"),
             new TokenType("SPACE", "\\ "),
             new TokenType("EndL", "[\\n]"),
             new TokenType("Carriage", "[\\r]"),
@@ -25,11 +25,11 @@ public class TokenType {
             new TokenType("ELSE","(?i)else"),
             new TokenType("FOR", "(?i)for"),
             new TokenType("WHILE","(?i)while"),
-            new TokenType("EndLine", "[;]"),
-            new TokenType("LeftPar", "[(]"),
-            new TokenType("RightPar", "[)]"),
-            new TokenType("LeftRectPar", "[{]"),
-            new TokenType("RightRectPAR", "[}]"),
+            new TokenType("END", "[;]"),
+            new TokenType("LPAR", "[(]"),
+            new TokenType("RPAR", "[)]"),
+            new TokenType("LRectPar", "[{]"),
+            new TokenType("RRectPAR", "[}]"),
             new TokenType("ADD","(?i)ADD"),
             new TokenType("GET","(?i)GET"),
             new TokenType("CONTAINS","(?i)CONTAINS"),

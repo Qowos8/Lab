@@ -17,7 +17,7 @@ public class Lexer {
         while(findTokens()){}
         for (Token token : tokenList)
             if (!(token.text.equals(" ") || token.text.equals("\\r")))
-                System.out.println(token.type.nameType + " " + token.text + " " + token.position);
+                System.out.println(token.type.nameType + " " + token.text + " " + "(" + token.position + ")-position");
         return this.tokenList;
     }
     public boolean findTokens(){
@@ -26,8 +26,8 @@ public class Lexer {
         }
         TokenType[] tokenTypes = TokenType.listOfToken;
         for (int i = 0; i < tokenTypes.length; i++){
-            TokenType tokenType = tokenTypes[i]; // элемент текцщей итерации по списку
-            String regex = tokenType.regex; // на основании строки создаем регулярное выражение
+            TokenType tokenType = tokenTypes[i];
+            String regex = tokenType.regex;
             Matcher matcher = Pattern.compile(regex).matcher(code);
             if(matcher.find(this.position) && matcher.start() == this.position)
             {
