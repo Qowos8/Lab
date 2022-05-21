@@ -9,6 +9,7 @@ public class TokenType {
     }
     public static TokenType[] listOfToken = {
             new TokenType("NUM", "^0|[1-9][0-9]*"),
+            new TokenType("VAR", "[a-z][a-z]*"),
             new TokenType("SPACE", "\\ "),
             new TokenType("EndL", "[\\n]"),
             new TokenType("Carriage", "[\\r]"),
@@ -33,6 +34,5 @@ public class TokenType {
             new TokenType("ADD","(?i)ADD"),
             new TokenType("GET","(?i)GET"),
             new TokenType("CONTAINS","(?i)CONTAINS"),
-            new TokenType("VAR", "[a-z][a-z]*"),
     };
 }

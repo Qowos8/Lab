@@ -16,7 +16,7 @@ public class Main {
 
     public static String checkFile(){
         String code = "";
-        try(FileReader reader = new FileReader("ThisCode.txt"))
+        try(FileReader reader = new FileReader("Example.txt"))
         {
             int c;
             while((c=reader.read())!= -1){

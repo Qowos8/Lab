@@ -4,13 +4,13 @@ import project.Token;
 import java.util.ArrayList;
 
 public class WNode extends ExNode{
-    Token oper;
+    Token operator;
     ExNode leftNode;
     ExNode rightNode;
     public ArrayList<ExNode> operations = new ArrayList<>();
 
     public WNode(Token oper, ExNode leftNode, ExNode rightNode) {
-        this.oper = oper;
+        this.operator = operator;
         this.leftNode = leftNode;
         this.rightNode = rightNode;
     }

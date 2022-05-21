@@ -16,7 +16,7 @@ public class Lexer {
     public ArrayList<Token> analyze(){
         while(findTokens()){}
         for (Token token : tokenList)
-            if (!(token.text.equals(" ") || token.text.equals("\\r")))
+            if (!(token.text.equals(" ") || token.text.equals("\\r")) || token.text.equals("\\n"))
                 System.out.println(token.type.nameType + " " + token.text + " " + "(" + token.position + ")-position");
         return this.tokenList;
     }
@@ -34,12 +34,12 @@ public class Lexer {
                 String result = this.code.substring(this.position,this.position + matcher.group().length());
                 Token token = new Token(tokenType, result, this.position);
                 this.position += result.length();
-                if(token.type!= TokenType.listOfToken[3] && token.type!= TokenType.listOfToken[2] && token.type!= TokenType.listOfToken[1])
+                if(token.type!= TokenType.listOfToken[4] && token.type!= TokenType.listOfToken[3] && token.type!= TokenType.listOfToken[2])
                     tokenList.add(token);
                 return true;
             }
         }
-        throw new Error("Error on position: " + this.position);
+        throw new Error("Ошибка на позиции: " + this.position);
     }
 
 }
