@@ -31,8 +31,5 @@ public class TokenType {
             new TokenType("RPAR", "[)]"),
             new TokenType("LRectPar", "[{]"),
             new TokenType("RRectPAR", "[}]"),
-            new TokenType("ADD","(?i)ADD"),
-            new TokenType("GET","(?i)GET"),
-            new TokenType("CONTAINS","(?i)CONTAINS"),
     };
 }
